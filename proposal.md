@@ -1,0 +1,3 @@
+- input csv file,  headerLine，include "Label", "X,", "Y" ，每个row 是一个坐标点record，通过Label 知道是那一张图片中的点坐标。图片Label可能是 {"A.tif", "T.tif", "C.tif", "G.tif", "ACT.tif",  "A1.tif", "T1.tif", "C1.tif", "G1.tif", "ACT1.tif"...等等}（A,T,C,G, ACT 作为开始，后面接数字或连接符）
+- 程序读取csv file，计算出 这些点的 序号。计算逻辑是通过，首位点和step，确定position是第几个点。
+- 需要添加中间状态信息作为debug， 载入文件后，显示存在哪些Label，对应的个数，每个label 计算出的点list，以及最终合并后的list，确定后导出到目的文件夹（csv file 相同目录下）
